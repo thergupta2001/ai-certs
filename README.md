@@ -23,6 +23,7 @@ git clone https://github.com/your-username/task-management-app.git
 
 ```bash
 cd frontend
+```
 
 ```bash
 cd backend
