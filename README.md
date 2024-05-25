@@ -16,3 +16,24 @@ Before you begin, ensure you have the following installed on your machine:
 
 ```bash
 git clone https://github.com/your-username/task-management-app.git
+
+### 2. Navigate to the repository
+
+### 3. Open two terminals, in first one, run the first command, and so on.
+
+```bash
+cd frontend
+
+```bash
+cd backend
+
+### 4. Run the following command in both the terminals
+
+```bash
+npm install
+
+### 5. Run the following command in both the terminals
+
+```bash
+npm run dev
+
