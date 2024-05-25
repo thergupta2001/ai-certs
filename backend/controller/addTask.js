@@ -1,30 +1,16 @@
-const TodoModel = require('../models/todoModel.js');
-
 const addTaskController = async (req, res) => {
   try {
     const { title, description, status, dueDate } = req.body;
 
-    // Create a new task
-    const newTask = new TodoModel({
-      title,
-      description,
-      status: status || 'pending', // Default status to 'pending' if not provided
-      dueDate
-    });
+    if (!title || !description || !status || !dueDate) {
+      return res.json({ message: "All the fields are required!" })
+    }
 
-    await newTask.save();
-
-    res.status(201).json({
-        message: "Task created successfully",
-        success: true,
-        path: null
-    });
+    return res.json({ message: "Task created successfully!" })
   } catch (error) {
     console.error('Error adding task:', error);
     res.status(500).json({
-        message: "Failed to add task",
-        success: false,
-        path: null
+      message: "Failed to add task"
     });
   }
 };
